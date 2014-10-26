@@ -12,12 +12,12 @@ def get_track_audio(track_id):
     
     track = json.load(open('data/%08d.json' % track_id))
 
-    return track['filename']
+    return track['recording_id']
 
 
 def get_track_analysis(track_id):
 
     analysis = json.load(open('data/%08d.json' % track_id))
-    analysis['track_id'] = track_id
+    analysis['recording_id'] = track_id
 
     return analysis
