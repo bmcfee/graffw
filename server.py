@@ -35,9 +35,9 @@ def load_config(server_ini):
 def run(**kwargs):
     app.run(**kwargs)
 
-@app.route('/audio/<int:track_id>')
-def get_track_audio(track_id):
-    return send_file_partial(data_layer.get_track_audio(track_id), cache_timeout=0)
+@app.route('/video')
+def get_track_video():
+    return send_file_partial('data/0.mp4', cache_timeout=0)
 
 @app.route('/analysis/<int:track_id>')
 def get_track_analysis(track_id):
