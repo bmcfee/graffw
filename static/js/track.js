@@ -27,7 +27,7 @@ $(document).ready(function () {
     }
 
     $(document).keypress(function (e) {
-        if (e.which == 13 && new Date().getTime() - timePressedForward > lastDuration) {
+        if (e.which == 13 && new Date().getTime() - timePressedForward > 1000 * lastDuration) {
 
             var time = myPlayer.currentTime();
 
