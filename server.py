@@ -44,7 +44,7 @@ def get_track_analysis(track_id):
     return json.encode(data_layer.get_track_analysis(track_id))
 
 @app.route('/')
-def get_track(track_id):
+def get_track():
     return flask.render_template('track.html', track_id=0)
 
 
