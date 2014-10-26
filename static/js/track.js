@@ -27,7 +27,7 @@ $(document).ready(function () {
     }
 
     $(document).keypress(function (e) {
-        if (e.which == 13 && new Date().getTime() - timePressForward > lastDuration) {
+        if (e.which == 13 && new Date().getTime() - timePressedForward > lastDuration) {
 
             var time = myPlayer.currentTime();
 
@@ -41,7 +41,7 @@ $(document).ready(function () {
     });
 
     function getCurrentChunkId(time) {
-        for (var i = 0; i < times.length; j++) {
+        for (var i = 0; i < times.length; i++) {
             if (times[i] > time) return i;
         }
     }
